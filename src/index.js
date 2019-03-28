@@ -42,16 +42,23 @@ class App extends React.Component {
             <>
                 <div id="background"></div>
                 <div id="scoreboard">
-                    <div className="card-wrapper">
-                        {this.state.data.map((data,index) => 
+                    {this.state.data.map((data,index) => 
+                        {index % 4 === 0 ?
+                            <div className="card-wrapper">
                                 <div className="card" key={index}>
                                     <h1>{data.point}</h1>
                                     <h6>Gemstones</h6>
                                     <p>{data.name}</p>
                                 </div>
-                            )
+                            </div>
+                            :
+                            <div className="card" key={index}>
+                                <h1>{data.point}</h1>
+                                <h6>Gemstones</h6>
+                                <p>{data.name}</p>
+                            </div>
                         }
-                    </div>
+                    )}
                 </div>
             </>
         )
