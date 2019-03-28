@@ -1,0 +1,22 @@
+{
+    "short_name": "App Name",
+    "name": "App Name",
+    "icons": [
+      {
+        "src": "../../assets/img/yccX192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "../../assets/img/ycc.png",
+        "type": "image/png",
+        "sizes": "800x800"
+      }
+    ],
+    "start_url": "../../",
+    "background_color": "#fff",
+    "display": "standalone",
+    "scope": "../../",
+    "theme_color": "#fff",
+    "orientation": "portrait"
+  }

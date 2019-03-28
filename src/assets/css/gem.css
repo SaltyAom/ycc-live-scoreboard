@@ -1,0 +1,109 @@
+:root {
+    --root: #f1f5fa;
+
+    --text-alter: #fff;
+    --text-alter-1: #ddd;
+    --text-alter-2: #bbb;
+
+    --text: #000;
+    --text-1: #222;
+    --text-2: #444;
+  
+    --success: #4cd964;
+    --warning: #f1c205;
+    --danger: #bb0000;
+    --info: #1eb8eb;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #12c2e9 15%, #c471ed 65%, #f64f59 90%);
+    color: var(--text);
+    cursor: default;
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#scoreboard {
+    display:flex;
+    width:100%;
+    min-height:100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:rgba(0,0,0,.225);
+    padding:30px 5%;
+    min-height: 100vh;
+}
+
+.card-wrapper {
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items:center;
+    width:100%;
+    
+}
+
+.card {
+    background-color:#fff;
+    padding: 15px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-start;
+    box-shadow: 0 3px 3px rgba(0,0,0,.375);
+    border-radius: 5px;
+    margin: 10px 20px;
+    width:calc(25% - 40px);
+    animation: fade-in 0.375s ease-out 0s 1;
+}
+
+@keyframes fade-in {
+    from {opacity:0;margin-top:25px;}
+}
+
+.card > h1 {
+    font-size: 48px;
+    color:#333;
+    margin:10px 0 30px 0;
+    width:100%;
+    text-align: center;
+}
+
+.card > h6 {
+    font-size: 16px;
+    color:#aaa;
+    width:100%;
+    text-align: right;
+    font-weight: normal;
+    padding-right: 5px;
+    margin:0;
+    margin:0;
+}
+
+.card > p {
+    font-size: 18px;
+    border-top:1.5px solid #ddd;
+    color:#777;
+    margin:0;
+    padding-top:8px;
+    word-break: break-all;
+}
+
+@media screen and (max-width: 960px){
+    .card-wrapper {
+        flex-direction: column;
+    }
+    #scoreboard { padding:30px 30px;}
+    .card {
+        width:100%;
+    }
+}
