@@ -43,13 +43,17 @@ class App extends React.Component {
                 <div id="background"></div>
                 <div id="scoreboard">
                     <div className="card-wrapper">
-                        {this.state.data.map((data,index) => 
-                            <div className="card" key={index}>
-                                <h1>{data.point}</h1>
-                                <h6>Gemstones</h6>
-                                <p>{data.name}</p>
-                            </div>
-                        )}
+                        { this.state.data[0] !== undefined ?
+                            <>
+                                { this.state.data.map((data,index) => 
+                                    <div className="card" key={index}>
+                                        <h1>{data.point}</h1>
+                                        <h6>Gemstones</h6>
+                                        <p>{data.name}</p>
+                                    </div>
+                                )}
+                            </> : null
+                        }
                     </div>
                 </div>
             </>
